@@ -8,8 +8,6 @@ Original file is located at
 """
 
 import pandas as pd
-import plotly.express as px
-
 vendas = pd.read_excel('Vendas.xlsx')
 # print(vendas)
 
@@ -31,3 +29,5 @@ maisVendida.head(10)
 vendasFiltro = vendas.groupby('Produto')['Quantidade'].sum()
 maisVendido = vendasFiltro.sort_values(ascending=False).head()
 print(maisVendido)
+
+#Com essa breve analise podemos ver que a bermuda mais vendida e a lisa, e poderia focar mais nas vendas desse produto em especifico e focar menos na bermuda estampada
